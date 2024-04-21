@@ -3,12 +3,18 @@ pipeline {
   stages {
     stage('version') {
       steps {
-        sh 'pwsh --version'
+        bat '''
+        @echo off
+        echo Hello. World!
+        '''
       }
     }
     stage('hello') {
       steps {
-        sh 'pwsh hello.ps1'
+        bat '''
+        @echo off
+        echo Executing from Powershell!
+        '''
       }
     }
   }
